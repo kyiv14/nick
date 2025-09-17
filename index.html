@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NICK</title>
+    <style>
+        /* Скидаємо стандартні відступи для тіла та html */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Запобігаємо появі смуг прокрутки */
+        }
+        /* Створюємо контейнер, що займає весь екран */
+        .fullscreen-bg {
+            position: fixed; /* Фіксуємо позицію відносно вікна браузера */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Розміщуємо контейнер позаду іншого контенту, якщо він буде */
+        }
+        /* Стилізуємо саме зображення */
+        .fullscreen-bg__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Масштабує зображення, зберігаючи пропорції та заповнюючи весь контейнер. Може обрізати частину зображення. */
+            object-position: center center; /* Центруємо зображення */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fullscreen-bg">
+        <img src="https://nick97.vercel.app/nick.jpg" alt="Фотографія на весь екран" class="fullscreen-bg__image">
+    </div>
+
+    </body>
+</html>
